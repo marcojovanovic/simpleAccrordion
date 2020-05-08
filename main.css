@@ -1,0 +1,55 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+
+.accordion-content-1{
+  width: 40rem;
+}
+
+.accordion-container{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+
+
+}
+
+.accordion-tab{
+
+  padding: 1rem;
+  background: #bebebe;
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+ 
+
+
+}
+
+
+
+.text-center{
+
+  text-align: center;
+ 
+}
+
+
+.accordion-content{
+  
+  background: #F5f5f5;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+
+
+
+}

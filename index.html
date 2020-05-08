@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Accordion</title>
+  <link href="main.css" rel="stylesheet"   />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
+</head>
+<body>
+
+          <h1 class='text-center'>Simple Accordion</h1>
+
+       <div class='accordion-container'>
+         <div class="accordion-content-1">
+          <div class='accordion-tab'>First Accord  <i class='fas fa-plus'></i></div>
+          <div class="accordion-content">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam eveniet neque amet tempora blanditiis velit impedit a eius ad numquam?
+          
+          </div>
+        <div class='accordion-tab'>Second Accord <i class='fas fa-plus'></i></div>
+          <div class="accordion-content">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam eveniet neque amet tempora blanditiis velit impedit a eius ad numquam?
+          </div>
+        <div class='accordion-tab'>Third Accord <i class='fas fa-plus'></i></div>
+          <div class="accordion-content">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam eveniet neque amet tempora blanditiis velit impedit a eius ad numquam?
+          </div>
+         </div>
+        
+        </div>
+  <script>
+
+      const accordionTab = document.querySelectorAll('.accordion-tab')
+      const accordionContent = document.querySelector('.accordion-tab')
+
+
+      accordionTab.forEach(tab=>{
+
+
+        tab.addEventListener('click', ()=>{
+
+           let content = tab.nextElementSibling 
+
+           tab.children[0].dataset.icon= 'plus'
+
+           if(content.style.maxHeight){
+
+
+            content.style.maxHeight = null
+
+
+           } else {
+
+            content.style.maxHeight = content.scrollHeight + 'px'
+            tab.children[0].dataset.icon= 'minus'
+
+           }
+        })
+      })
+
+  </script>
+</body>
+</html>
